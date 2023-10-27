@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Rate</th>
+            <th>Quantity</th>
+            <th>Stock</th>
+            <th>Photo</th>
+        </tr>
+        {% for cart_item in cart_items %}
+        <tr>
+            <td>{{ cart_item.name.name }}</td>  {# Accessing the name of the product associated with the cart_item #}
+            <td>{{ cart_item.name.rate }}</td>
+            <td>{{ cart_item.name.quantity }}</td>
+            <td>{{ cart_item.name.stock }}</td>
+            <td><img src="{{ cart_item.name.photo.url }}" width="100" height="100" alt="{{ cart_item.name.name }}" /></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
